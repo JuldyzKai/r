@@ -25,12 +25,13 @@
             background-color: var(--background-color);
             color: var(--text-color);
             line-height: 1.6;
-            
+            min-height: 100vh;
         }
         
+        /* Контейнерді толық енімен жасау */
         .container {
-            width: 90%;
-            max-width: 2000px;
+            width: 100%;
+            max-width: 1400px; /* Кеңейтеміз */
             margin: 0 auto;
             padding: 20px;
         }
@@ -39,270 +40,374 @@
         header {
             background: linear-gradient(to right, var(--qogam-color), var(--altin-color));
             color: var(--white);
-            padding: 20px 0;
+            padding: 30px 0; /* Үлкейтеміз */
             text-align: center;
             border-bottom: 5px solid var(--step-color);
+            width: 100%;
         }
         
         .logo {
-            font-size: 2.5rem;
+            font-size: 3rem; /* Үлкейтеміз */
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
         
         .tagline {
-            font-size: 1.2rem;
+            font-size: 1.5rem; /* Үлкейтеміз */
             font-style: italic;
         }
         
         /* Navigation */
         nav {
             background-color: var(--step-color);
-            padding: 15px 0;
+            padding: 20px 0; /* Үлкейтеміз */
+            width: 100%;
         }
         
         nav ul {
             display: flex;
             justify-content: center;
             list-style: none;
+            max-width: 1400px;
+            margin: 0 auto;
         }
         
         nav ul li {
-            margin: 0 15px;
+            margin: 0 25px; /* Арақашықтықты ұлғайтамыз */
         }
         
         nav ul li a {
             color: var(--white);
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.1rem;
-            padding: 5px 10px;
+            font-size: 1.3rem; /* Үлкейтеміз */
+            padding: 10px 20px; /* Үлкейтеміз */
             border-radius: 5px;
-            transition: background-color 0.3s;
+            transition: all 0.3s;
         }
         
         nav ul li a:hover {
             background-color: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
         }
         
         /* Section Styles */
         section {
-            padding: 40px 0;
+            padding: 60px 0; /* Үлкейтеміз */
+            width: 100%;
         }
         
         h2 {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px; /* Үлкейтеміз */
             color: var(--qogam-color);
-            font-size: 2rem;
-            border-bottom: 2px solid var(--altin-color);
-            padding-bottom: 10px;
+            font-size: 2.5rem; /* Үлкейтеміз */
+            border-bottom: 3px solid var(--altin-color);
+            padding-bottom: 15px;
         }
         
         /* Home Page */
         .hero {
-            background: url('https://via.placeholder.com/1200x600') no-repeat center center/cover;
-            height: 500px;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1546975490-a79abddaeaeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') 
+                        no-repeat center center/cover;
+            height: 70vh; /* Экран биіктігінің 70% */
+            min-height: 600px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: var(--white);
             position: relative;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
         }
         
         .hero-content {
             position: relative;
             z-index: 1;
-            max-width: 800px;
-            padding: 0 20px;
+            max-width: 900px;
+            padding: 0 40px;
         }
         
         .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            font-size: 4rem; /* Үлкейтеміз */
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
         }
         
         .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
+            font-size: 1.5rem; /* Үлкейтеміз */
+            margin-bottom: 40px;
         }
         
         .btn {
             display: inline-block;
             background-color: var(--altin-color);
             color: var(--white);
-            padding: 12px 25px;
-            border-radius: 5px;
+            padding: 15px 35px; /* Үлкейтеміз */
+            border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
-            transition: background-color 0.3s;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            border: 2px solid transparent;
         }
         
         .btn:hover {
             background-color: var(--qogam-color);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
         }
         
         .features {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-            margin-top: 40px;
+            margin-top: 50px;
+            gap: 30px;
         }
         
         .feature {
             flex: 1;
-            min-width: 300px;
-            margin: 15px;
-            padding: 20px;
+            min-width: 350px; /* Үлкейтеміз */
+            margin: 0;
+            padding: 30px;
             background-color: var(--white);
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
             text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .feature:hover {
+            transform: translateY(-10px);
         }
         
         .feature i {
-            font-size: 3rem;
+            font-size: 4rem; /* Үлкейтеміз */
             color: var(--step-color);
+            margin-bottom: 20px;
+        }
+        
+        .feature h3 {
+            font-size: 1.5rem;
             margin-bottom: 15px;
+        }
+        
+        .feature p {
+            font-size: 1.1rem;
+            line-height: 1.7;
         }
         
         /* Gallery */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Үлкейтеміз */
+            gap: 30px;
         }
         
         .poet-card {
             background-color: var(--white);
-            border-radius: 10px;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
         }
         
         .poet-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-15px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
         }
         
         .poet-img {
             width: 100%;
-            height: 300px;
+            height: 350px; /* Үлкейтеміз */
             object-fit: cover;
+            transition: transform 0.3s;
+        }
+        
+        .poet-card:hover .poet-img {
+            transform: scale(1.05);
         }
         
         .poet-info {
-            padding: 15px;
+            padding: 25px;
         }
         
         .poet-info h3 {
             color: var(--qogam-color);
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        .poet-info p {
+            margin-bottom: 20px;
+            line-height: 1.6;
         }
         
         /* Poems Collection */
         .poems-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Үлкейтеміз */
+            gap: 30px;
         }
         
         .poem-card {
             background-color: var(--white);
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .poem-card:hover {
+            transform: translateY(-8px);
         }
         
         .poem-title {
             color: var(--qogam-color);
-            margin-bottom: 15px;
-            border-bottom: 1px solid var(--altin-color);
-            padding-bottom: 10px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--altin-color);
+            padding-bottom: 15px;
+            font-size: 1.4rem;
         }
         
         .poem-text {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             line-height: 1.8;
+            font-size: 1.1rem;
         }
         
         .audio-player {
             width: 100%;
-            margin-top: 10px;
+            margin-top: 15px;
+            border-radius: 25px;
+        }
+        
+        .poem-explanation {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(139, 69, 19, 0.05);
+            border-radius: 8px;
+            border-left: 4px solid var(--step-color);
         }
         
         /* Videos & Animations */
         .media-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Үлкейтеміз */
+            gap: 30px;
         }
         
         .media-item {
             background-color: var(--white);
-            border-radius: 10px;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
         }
         
-        .media-item video, .media-item iframe {
+        .media-item:hover {
+            transform: translateY(-8px);
+        }
+        
+        .media-item iframe {
             width: 100%;
-            height: 250px;
+            height: 300px; /* Үлкейтеміз */
+            display: block;
         }
         
         .media-info {
-            padding: 15px;
+            padding: 25px;
+        }
+        
+        .media-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--qogam-color);
         }
         
         /* Footer */
         footer {
-            background-color: var(--qogam-color);
+            background: linear-gradient(to right, var(--qogam-color), var(--step-color));
             color: var(--white);
-            padding: 30px 0;
+            padding: 50px 0;
             text-align: center;
+            width: 100%;
         }
         
         .footer-content {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
+            max-width: 1400px;
+            margin: 0 auto;
+            gap: 40px;
         }
         
         .footer-section {
             flex: 1;
             min-width: 300px;
-            margin: 15px;
+            margin: 0;
         }
         
         .footer-section h3 {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            color: var(--altin-color);
+            font-size: 1.4rem;
+        }
+        
+        .footer-section p, .footer-section li {
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin: 12px 0;
+        }
+        
+        .footer-section ul li a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section ul li a:hover {
             color: var(--altin-color);
         }
         
         .copyright {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.2);
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid rgba(255,255,255,0.2);
+            font-size: 1.1rem;
         }
         
         /* Responsive Design */
+        @media (max-width: 1200px) {
+            .container {
+                padding: 20px 40px;
+            }
+            
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+        }
+        
         @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
             nav ul {
                 flex-direction: column;
                 align-items: center;
+                gap: 10px;
             }
             
             nav ul li {
@@ -310,11 +415,42 @@
             }
             
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
             }
             
             .features {
                 flex-direction: column;
+            }
+            
+            .media-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            .logo {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero {
+                height: 50vh;
+                min-height: 400px;
+            }
+            
+            h2 {
+                font-size: 2rem;
             }
         }
     </style>
@@ -353,7 +489,7 @@
         
         <div class="container">
             <h2>Жыраулық поэзияның ұлттық мінездегі орны</h2>
-            <p>Қазақ жырауларының поэзиясы - біздің ұлтымыздың рухани қазынасы. Олардың шығармалары арқылы біз қазақ халқының тарихын, мәдениетін, дүниетанымын және ұлттық мінезін тереңірек түсіне аламыз.</p>
+            <p style="font-size: 1.2rem; line-height: 1.8; text-align: center; max-width: 1000px; margin: 0 auto 40px;">Қазақ жырауларының поэзиясы - біздің ұлтымыздың рухани қазынасы. Олардың шығармалары арқылы біз қазақ халқының тарихын, мәдениетін, дүниетанымын және ұлттық мінезін тереңірек түсіне аламыз.</p>
             
             <div class="features">
                 <div class="feature">
@@ -399,7 +535,7 @@
                 </div>
                 
                 <div class="poet-card">
-                    <img src="АСАНҚАЙҒЫ.png" alt="Асан Қайғы" class="poet-img">
+                    <img src="1АСАНҚАЙҒЫ.png" alt="Асан Қайғы" class="poet-img">
                     <div class="poet-info">
                         <h3>Асан Қайғы</h3>
                         <p>XIV-XV ғасырларда өмір сүрген. "Жәнібекке айтқаны" толғауының авторы.</p>
@@ -420,7 +556,7 @@
     </section>
     
     <!-- Poems Collection Section -->
-   <section id="poems">
+    <section id="poems">
         <div class="container">
             <h2>Толғаулар жинағы</h2>
             <div class="poems-container">
@@ -439,7 +575,6 @@
                     </div>
                     <audio controls class="audio-player">
                         <source src="АҚТАМБЕРДІ.mp3" type="audio/mpeg">
-                        <source src="aktamberdi-karagay.ogg" type="audio/ogg">
                         Сіздің браузеріңіз аудио элементін қолдамайды.
                     </audio>
                     <div class="poem-explanation">
@@ -463,7 +598,6 @@
                     </div>
                     <audio controls class="audio-player">
                         <source src="Еңсегей бойлы ер есім.mp3" type="audio/mpeg">
-                        <source src="zhiembet-ersegey.ogg" type="audio/ogg">
                         Сіздің браузеріңіз аудио элементін қолдамайды.
                     </audio>
                     <div class="poem-explanation">
@@ -483,7 +617,6 @@
                     </div>
                     <audio controls class="audio-player">
                         <source src="АСАНН.mp3" type="audio/mpeg">
-                        <source src="asan-kaygy-zhanibek.ogg" type="audio/ogg">
                         Сіздің браузеріңіз аудио элементін қолдамайды.
                     </audio>
                     <div class="poem-explanation">
@@ -500,7 +633,6 @@
         <div class="container">
             <h2>Бейнелер мен анимациялар</h2>
             <div class="media-container">
-
                 <div class="media-item">
                     <iframe src="Қазақ жырауларының тарихы». Ақтамберді жырау.mp4" frameborder="0" allowfullscreen></iframe>
                     <div class="media-info">
@@ -508,17 +640,16 @@
                         <p>Қазақ жыраулары поэзиясының даму тарихына арналған қысқаша баяндама.</p>
                     </div>
                 </div>
-                    
                 
                 <div class="media-item">
                     <iframe src="Жыраулар.mp4" frameborder="0" allowfullscreen></iframe>
                     <div class="media-info">
                         <h3>Жыраулар тарихы</h3>
-                        <p> </p>
+                        <p>Қазақ жырауларының тарихи даму жолы мен әдеби мұрасы.</p>
                     </div>
                 </div>
                 
-                 <div class="media-item">
+                <div class="media-item">
                     <iframe src="«Асанқайғының жерге айтқан сыны» аңызы..mp4" frameborder="0" allowfullscreen></iframe>
                     <div class="media-info">
                         <h3>Асан қайғы Сәбитұлы</h3>
@@ -543,9 +674,9 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Байланыс ақпараты</h3>
-                    <p>Email: info@qazaq-zhiraulary.kz</p>
-                    <p>Телефон: +7 777 123 4567</p>
-                    <p>Мекенжай: Алматы, Қазақстан</p>
+                    <p>Email: Juldiz8469@gmail.com</p>
+                    <p>Телефон: +7 747 153 56 76</p>
+                    <p>Мекенжай:  Қазақстан Алматы Наурызбай ауданы №206 мектеп-гимназия</p>
                 </div>
                 
                 <div class="footer-section">
@@ -565,7 +696,7 @@
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 Қазақ Жыраулары Поэзиясы. Барлық құқықтар қорғалған.</p>
+                <p>&copy; 2025 жыл. Қазақ Жыраулары Поэзиясы. Барлық құқықтар қорғалған.</p>
             </div>
         </div>
     </footer>
@@ -608,6 +739,19 @@
             card.style.transform = 'translateY(20px)';
             card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
             observer.observe(card);
+        });
+
+        // Audio player enhancement
+        const audioPlayers = document.querySelectorAll('audio');
+        audioPlayers.forEach(audio => {
+            audio.addEventListener('play', function() {
+                // Pause other audio players when one starts playing
+                audioPlayers.forEach(otherAudio => {
+                    if (otherAudio !== audio && !otherAudio.paused) {
+                        otherAudio.pause();
+                    }
+                });
+            });
         });
     </script>
 </body>
